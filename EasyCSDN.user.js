@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  简洁、专注、高效的CSDN，清理99%多余的元素，只展示文章正文和关联文章
-// @version      1.0
+// @version      1.1
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
+// @updateURL    https://greasyfork.org/scripts/480668-easycsdn/code/EasyCSDN.user.js
+// @downloadURL  https://greasyfork.org/scripts/480668-easycsdn/code/EasyCSDN.user.js
 // @license      GPL-2.0-only
 // @match        *://blog.csdn.net/*/article/details/*
 // @match        *://bbs.csdn.net/topics/*
