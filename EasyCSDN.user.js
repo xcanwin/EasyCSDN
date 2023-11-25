@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、临时显示推荐等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      13.0
+// @version      14.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -71,6 +71,11 @@ body {
 /*临时显示*/
 .show-temp {
     display: unset !important;
+}
+
+/*适当展示图片*/
+img {
+    max-width: 70% !important;
 }
 `;
 
