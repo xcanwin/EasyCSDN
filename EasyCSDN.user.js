@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  简洁、专注、高效的CSDN，清理99%多余的元素，只展示文章正文和关联文章
-// @version      1.1
+// @version      2.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -23,7 +23,7 @@
 #toolbarBox, /*隐藏顶部*/
 .blog_container_aside, /*隐藏左边栏*/
 #rightAside, /*隐藏右边栏*/
-.csdn-side-toolbar, /*隐藏右边栏2*/
+.csdn-side-toolbar, /*隐藏右边栏-磁吸*/
 .blog-footer-bottom, /*隐藏底部*/
 .recommend-nps-box, /*隐藏打分*/
 .left-toolbox /*隐藏关注*/
@@ -33,8 +33,9 @@
 
 /*隐藏背景*/
 body {
-    background: none;
-    background-color: #f5f6f7;
+    background: none !important;
+    background-image: unset !important;
+    background-color: #f5f6f7 !important;
 }
 
 /*正文居中*/
