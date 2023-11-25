@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
-// @description  这是一款提高CSDN简洁度的插件。它可以让你的CSDN学习之路变得简洁、专注、高效、畅快。主要功能是净化页面，净化99%多余元素，只展示文章正文和关联文章。
-// @version      11.1
+// @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、临时显示推荐等。让我们的学习体验无比简洁、专注、高效、畅快。
+// @version      11.2
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
