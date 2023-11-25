@@ -4,6 +4,14 @@
 
 <img src="/assets/EasyCSDN.png" width="750"></img>
 
+<br>
+
+<img alt="version" src="https://img.shields.io/greasyfork/v/480668?style=for-the-badge&label=%E7%89%88%E6%9C%AC&logo=velog&logoColor=BE95FF&color=7B68EE"></img>
+<img alt="download" src="https://img.shields.io/greasyfork/dt/480668?style=for-the-badge&label=%E7%94%A8%E6%88%B7%E5%AE%89%E8%A3%85%E9%87%8F&logo=bilibili&logoColor=78FF96"></img>
+<img alt="stars" src="https://img.shields.io/github/stars/xcanwin/EasyCSDN?style=for-the-badge&label=Stars&logo=undertale&logoColor=red&color=orange"></img>
+<img alt="forks" src="https://img.shields.io/github/forks/xcanwin/EasyCSDN?style=for-the-badge&label=Forks&logo=stackshare&logoColor=green&color=0AC18E"></img>
+<img alt="javascript" src="https://img.shields.io/badge/JavaScript-%3E%3DES13-green?style=for-the-badge&label=JavaScript&logo=JavaScript&color=FDEE21"></img>
+
 </div></center>
 
 <br>
