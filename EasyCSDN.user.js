@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款提高CSDN简洁度的插件。它可以让你的CSDN学习之路变得简洁、专注、高效、畅快。主要功能是净化页面，净化99%多余元素，只展示文章正文和关联文章。
-// @version      9.1
+// @version      10.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -21,13 +21,14 @@
     GM_addStyle(`
 .passport-login-container /*隐藏登录提示*/,
 .passport-login-tip-container /*隐藏登录权益提示*/,
-body>#toolbarBox /*隐藏顶部*/,
+body>#toolbarBox /*隐藏顶部置顶的菜单栏*/,
 .blog_container_aside /*隐藏左边栏*/,
 #rightAside /*隐藏右边栏*/,
 .csdn-side-toolbar /*隐藏右边栏-磁吸*/,
 .blog-footer-bottom /*隐藏底部*/,
 .recommend-nps-box /*隐藏打分*/,
-.left-toolbox /*隐藏关注*/,
+.left-toolbox /*隐藏底部置顶的关注栏*/,
+.more-toolbox-new /*隐藏正文底部的关注栏*/,
 .blog-tags-box /*隐藏开头的专栏收录*/,
 #blogColumnPayAdvert /*隐藏结尾的专栏收录*/,
 #treeSkill /*隐藏技能树*/,
@@ -63,7 +64,7 @@ body {
 }
 
 /*展示分界线*/
-main #toolBarBox {
+main .blog-content-box {
     margin-bottom: 64px !important;
 }
 `);
@@ -93,5 +94,11 @@ body {
 }
 
 `);
+
+    window.addEventListener('click', function(event) {
+        //const avatarDiv = findParent(event.target, avatarSelector);
+        //if ( == $('#toolBarBox')) {
+        console.log(event.target);
+    });
 
 })();
