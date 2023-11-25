@@ -4,6 +4,8 @@
 
 <img src="/assets/EasyCSDN.png" width="750"></img>
 
+</div></center>
+
 <br>
 
 ## 项目简介
