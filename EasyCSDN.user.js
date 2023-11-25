@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款提高CSDN简洁度的插件。它可以让你的CSDN学习之路变得简洁、专注、高效、畅快。主要功能是净化页面，净化99%多余元素，只展示文章正文和关联文章。
-// @version      10.1
+// @version      11.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -17,8 +17,11 @@
 (function() {
     'use strict';
 
-    /*电脑端*/
-    const ec_style_pc = `
+    const $ = (Selector, el) => (el || document).querySelector(Selector);
+    const $$ = (Selector, el) => (el || document).querySelectorAll(Selector);
+
+    /*电脑端净化样式*/
+    const purify_style_pc = `
 .passport-login-container /*隐藏[置顶的]登录提示*/,
 .passport-login-tip-container /*隐藏[置顶的]登录权益提示*/,
 body>#toolbarBox /*隐藏[置顶的][顶部的]菜单栏*/,
@@ -32,6 +35,7 @@ body>#toolbarBox /*隐藏[置顶的][顶部的]菜单栏*/,
 #blogColumnPayAdvert /*隐藏[正文的][顶部的]专栏*/,
 .more-toolbox-new /*隐藏[正文的][底部的]关注栏*/,
 #treeSkill /*隐藏[正文的][底部的]技能树*/,
+.recommend-box /*隐藏[正文的][底部的]推荐文章*/,
 code .hljs-button /*隐藏[正文的][代码块的]复制提示*/,
 .article-search-tip /*隐藏[正文的]搜索提示*/
 {
@@ -67,11 +71,16 @@ body {
 main .blog-content-box {
     margin-bottom: 64px !important;
 }
+
+/*临时显示*/
+.show-temp {
+    display: unset !important;
+}
 `;
 
 
-    /*移动端*/
-    const ec_style_mb = `
+    /*移动端净化样式*/
+    const purify_style_mb = `
 #csdn-toolbar /*隐藏[置顶的][顶部的]菜单栏*/,
 #operate /*隐藏[置顶的][底部的]搜索标签与评论*/,
 .aside-header-fixed /*隐藏[顶部的]关注*/
@@ -95,8 +104,31 @@ body {
 }
 `;
 
+    //净化页面
+    const purifyPage = function() {
+        GM_addStyle(purify_style_pc);
+        GM_addStyle(purify_style_mb);
+    };
 
-    GM_addStyle(ec_style_pc);
-    GM_addStyle(ec_style_mb);
+    //显示[正文的][底部的]推荐文章
+    const showRecommend = function() {
+        window.addEventListener('click', showRecommend.listen_click);
+    };
+
+    //显示[正文的][底部的]推荐文章-事件监听
+    showRecommend.listen_click = function(event) {
+        const el_h = event.target.scrollHeight; //事件的目标元素的高度
+        const el_mouse_y = event.layerY; //事件的目标元素里面的鼠标y坐标
+        //判断分界线范围内
+        if (event.target === $("main") && el_h - 64 < el_mouse_y <= el_h) {
+            $$(".recommend-box").forEach(el => {
+                el.classList.add("show-temp");
+            });
+            $(".recommend-box")?.scrollIntoView();
+        }
+    };
+
+    purifyPage();
+    showRecommend();
 
 })();
