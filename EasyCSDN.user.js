@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款提高CSDN简洁度的插件。它可以让你的CSDN学习之路变得简洁、专注、高效、畅快。主要功能是净化页面，净化99%多余元素，只展示文章正文和关联文章。
-// @version      10.0
+// @version      10.1
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -18,22 +18,22 @@
     'use strict';
 
     /*电脑端*/
-    GM_addStyle(`
-.passport-login-container /*隐藏登录提示*/,
-.passport-login-tip-container /*隐藏登录权益提示*/,
-body>#toolbarBox /*隐藏顶部置顶的菜单栏*/,
-.blog_container_aside /*隐藏左边栏*/,
-#rightAside /*隐藏右边栏*/,
-.csdn-side-toolbar /*隐藏右边栏-磁吸*/,
-.blog-footer-bottom /*隐藏底部*/,
-.recommend-nps-box /*隐藏打分*/,
-.left-toolbox /*隐藏底部置顶的关注栏*/,
-.more-toolbox-new /*隐藏正文底部的关注栏*/,
-.blog-tags-box /*隐藏开头的专栏收录*/,
-#blogColumnPayAdvert /*隐藏结尾的专栏收录*/,
-#treeSkill /*隐藏技能树*/,
-code .hljs-button /*隐藏复制提示*/,
-.article-search-tip /*隐藏正文搜索提示*/
+    const ec_style_pc = `
+.passport-login-container /*隐藏[置顶的]登录提示*/,
+.passport-login-tip-container /*隐藏[置顶的]登录权益提示*/,
+body>#toolbarBox /*隐藏[置顶的][顶部的]菜单栏*/,
+.left-toolbox /*隐藏[置顶的][底部的]关注栏*/,
+.blog_container_aside /*隐藏[左边的]栏*/,
+#rightAside /*隐藏[右边的]栏*/,
+.csdn-side-toolbar /*隐藏[右边的]磁吸栏*/,
+.blog-footer-bottom /*隐藏[底部的]网站介绍*/,
+.recommend-nps-box /*隐藏[底部的]打分*/,
+.blog-tags-box /*隐藏[正文的][顶部的]分类*/,
+#blogColumnPayAdvert /*隐藏[正文的][顶部的]专栏*/,
+.more-toolbox-new /*隐藏[正文的][底部的]关注栏*/,
+#treeSkill /*隐藏[正文的][底部的]技能树*/,
+code .hljs-button /*隐藏[正文的][代码块的]复制提示*/,
+.article-search-tip /*隐藏[正文的]搜索提示*/
 {
     display: none !important;
 }
@@ -67,13 +67,14 @@ body {
 main .blog-content-box {
     margin-bottom: 64px !important;
 }
-`);
+`;
+
 
     /*移动端*/
-    GM_addStyle(`
-#csdn-toolbar /*隐藏顶部*/,
-#operate /*隐藏底部评论和搜索提示*/,
-.aside-header-fixed /*隐藏关注*/
+    const ec_style_mb = `
+#csdn-toolbar /*隐藏[置顶的][顶部的]菜单栏*/,
+#operate /*隐藏[置顶的][底部的]搜索标签与评论*/,
+.aside-header-fixed /*隐藏[顶部的]关注*/
 {
     display: none !important;
 }
@@ -92,13 +93,10 @@ body {
     background-color: #ffebeb !important;
     height: 32px !important;
 }
+`;
 
-`);
 
-    window.addEventListener('click', function(event) {
-        //const avatarDiv = findParent(event.target, avatarSelector);
-        //if ( == $('#toolBarBox')) {
-        console.log(event.target);
-    });
+    GM_addStyle(ec_style_pc);
+    GM_addStyle(ec_style_mb);
 
 })();
