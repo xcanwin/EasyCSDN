@@ -1,3 +1,11 @@
+<br><br>
+
+<center><div align="center">
+
+<img src="/assets/EasyCSDN.png" width="750"></img>
+
+<br>
+
 ## 项目简介
 
 - 喜欢这个插件的小伙伴，可以给我的GITHUB项目 [EasyCSDN](https://github.com/xcanwin/EasyCSDN) 点个⭐️STAR支持一下。
