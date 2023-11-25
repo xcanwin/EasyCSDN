@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、临时显示推荐等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      11.2
+// @version      12.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -46,7 +46,7 @@ code .hljs-button /*隐藏[正文的][代码块的]复制提示*/,
 body {
     background: none !important;
     background-image: unset !important;
-    background-color: #ffebeb !important;
+    background-color: unset !important;
 }
 
 /*正文居中*/
@@ -65,11 +65,6 @@ body {
 }
 .main_father.d-flex {
     display: unset !important;
-}
-
-/*展示分界线*/
-main .blog-content-box {
-    margin-bottom: 64px !important;
 }
 
 /*临时显示*/
@@ -110,25 +105,23 @@ body {
         GM_addStyle(purify_style_mb);
     };
 
-    //显示[正文的][底部的]推荐文章
+    //显示推荐的开关
     const showRecommend = function() {
-        window.addEventListener('click', showRecommend.listen_click);
-    };
-
-    //显示[正文的][底部的]推荐文章-事件监听
-    showRecommend.listen_click = function(event) {
-        const el_h = event.target.scrollHeight; //事件的目标元素的高度
-        const el_mouse_y = event.layerY; //事件的目标元素里面的鼠标y坐标
-        //判断分界线范围内
-        if (event.target === $("main") && el_h - 64 < el_mouse_y <= el_h) {
+        const sr = document.createElement("div");
+        sr.style = "height: 64px; background-color: #eaeaea;";
+        sr.onclick = function() {
             $$(".recommend-box").forEach(el => {
                 el.classList.toggle("show-temp");
             });
             $(".recommend-box")?.scrollIntoView();
-        }
+        };
+        $('main').insertBefore(sr, $('.recommend-box'));
+    };
+
+    window.onload = function() {
+        showRecommend();
     };
 
     purifyPage();
-    showRecommend();
 
 })();
