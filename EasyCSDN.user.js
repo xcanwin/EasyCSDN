@@ -140,7 +140,7 @@ body {
     const prettyCode = function() {
         const browser_menu_height = window.outerHeight - window.innerHeight; //浏览器顶部菜单栏高度
         const browser_height_max = screen.height - browser_menu_height; //浏览器最大可展示高度
-        $$('.prettyprint').forEach(el => {
+        $$('.set-code-hide').forEach(el => {
             if (el.clientHeight <= browser_height_max * 0.8) {
                 //预判代码块实际高度，若是浏览器最大可展示高度的80%以内，则自动展开代码
                 $(".hide-preCode-bt", el)?.click();
