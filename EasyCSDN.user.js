@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
-// @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、临时显示推荐等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      20.0
+// @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码等。让我们的学习体验无比简洁、专注、高效、畅快。
+// @version      21.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -140,11 +140,16 @@ body {
     const prettyCode = function() {
         const browser_menu_height = window.outerHeight - window.innerHeight; //浏览器顶部菜单栏高度
         const browser_height_max = screen.height - browser_menu_height; //浏览器最大可展示高度
+        let i = 0;
         $$('.set-code-hide').forEach(el => {
-            if ($("code", el)?.clientHeight <= browser_height_max * 0.8) {
-                //预判代码块实际高度，若是浏览器最大可展示高度的80%以内，则自动展开代码
+            if (i == 0 && $("code", el)?.clientHeight <= browser_height_max * 1.8) {
+                //预判首个代码块实际高度，若小于浏览器最大可展示高度的180%，则自动展开代码
+                $(".hide-preCode-bt", el)?.click();
+            } else if ($("code", el)?.clientHeight <= browser_height_max * 0.8) {
+                //预判其余代码块实际高度，若小于浏览器最大可展示高度的80%，则自动展开代码
                 $(".hide-preCode-bt", el)?.click();
             }
+            i++;
         });
     };
 
