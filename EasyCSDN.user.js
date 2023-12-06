@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、临时显示推荐等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      18.0
+// @version      19.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -136,8 +136,21 @@ body {
         $('main').insertBefore(sr, $('.recommend-box'));
     };
 
+    //展开代码
+    const prettyCode = function() {
+        const browser_menu_height = window.outerHeight - window.innerHeight; //浏览器顶部菜单栏高度
+        const browser_height_max = screen.height - browser_menu_height; //浏览器最大可展示高度
+        $$('.prettyprint').forEach(el => {
+            if (el.clientHeight <= browser_height_max * 0.8) {
+                //预判代码块实际高度，若是浏览器最大可展示高度的80%以内，则自动展开代码
+                $(".hide-preCode-bt", el)?.click();
+            }
+        });
+    };
+
     window.onload = function() {
         showRecommend();
+        prettyCode();
     };
 
     purifyPage();
