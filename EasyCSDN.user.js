@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      23.0
+// @version      24.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -38,6 +38,7 @@ body>#toolbarBox /*隐藏[置顶的][顶部的]菜单栏*/,
 #treeSkill /*隐藏[正文的][底部的]技能树*/,
 .recommend-box /*隐藏[正文的][底部的]推荐文章*/,
 .hljs-button.signin /*隐藏[正文的][代码块的]复制提示*/,
+.code-annotation /*隐藏[正文的][代码块的]一键注释*/,
 .article-search-tip /*隐藏[正文的]搜索提示*/
 {
     display: none !important;
