@@ -153,9 +153,19 @@ body {
         });
     };
 
+    // 跳过关注
+    const skipFollow = function() {
+        if($('#article_content') && $('.hide-article-box')) {
+            $('.hide-article-box').style.display = 'none';
+            $('#article_content').style.height = 'auto';
+            $('#article_content').style.overflow = 'auto';
+        }
+    }
+
     window.onload = function() {
         showRecommend();
         prettyCode();
+        skipFollow();
     };
 
     purifyPage();
