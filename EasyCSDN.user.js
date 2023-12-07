@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
-// @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      21.0
+// @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码、阅读全文等。让我们的学习体验无比简洁、专注、高效、畅快。
+// @version      22.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -89,6 +89,15 @@ body {
 img {
     max-width: 70% !important;
 }
+
+/*阅读全文*/
+.hide-article-box {
+    display: none !important;
+}
+#article_content {
+    height: auto !important;
+    overflow: auto !important;
+}
 `;
 
 
@@ -153,19 +162,9 @@ body {
         });
     };
 
-    // 跳过关注
-    const skipFollow = function() {
-        if($('#article_content') && $('.hide-article-box')) {
-            $('.hide-article-box').style.display = 'none';
-            $('#article_content').style.height = 'auto';
-            $('#article_content').style.overflow = 'auto';
-        }
-    }
-
     window.onload = function() {
         showRecommend();
         prettyCode();
-        skipFollow();
     };
 
     purifyPage();
