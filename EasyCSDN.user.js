@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      24.0
+// @version      25.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -51,13 +51,13 @@ body {
     background-color: unset !important;
 }
 
-/*标题居中增大*/
+/*调整标题*/
 #articleContentId {
     display: flex;
     justify-content: center;
     font-size: 33px;
-    padding-top:10px;
-    padding-bottom: 10px;
+    padding-top:23px;
+    padding-bottom: 15px;
 }
 
 /*正文的div居中*/
@@ -71,7 +71,7 @@ body {
     width: 100%;
 }
 #mainBox main {
-    width: 95%;
+    width: 82%;
     margin-bottom: unset !important;
 }
 .main_father {
