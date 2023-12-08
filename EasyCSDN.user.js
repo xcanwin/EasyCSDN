@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      25.0
+// @version      25.1
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -168,7 +168,6 @@ body {
         const origOpen = XMLHttpRequest.prototype.open;
         const block_url = 'redisdatarecall\.csdn\.net/recommend/';
         XMLHttpRequest.prototype.open = function() {
-            console.log('request started!');
             const reqUrl = arguments[1];
             if (reqUrl.match(block_url)){
                 return;
