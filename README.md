@@ -89,3 +89,7 @@
 ## 关于 复制文本 功能
 
 - 使用我另一个GITHUB项目 [Unlimit-Web](https://github.com/xcanwin/Unlimit-Web/)
+
+## 其他
+
+- [EasyCSDN](https://github.com/xcanwin/EasyCSDN/) 与 [EasyJIANSHU](https://github.com/xcanwin/EasyJIANSHU/) 会保持相同的视觉效果，推荐都安装。
