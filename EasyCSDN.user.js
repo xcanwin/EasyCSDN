@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EasyCSDN
 // @description  这是一款促进CSDN极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码等。让我们的学习体验无比简洁、专注、高效、畅快。
-// @version      29.0
+// @version      30.0
 // @author       xcanwin
 // @namespace    https://github.com/xcanwin/EasyCSDN/
 // @supportURL   https://github.com/xcanwin/EasyCSDN/
@@ -54,12 +54,12 @@ body {
 }
 
 /*调整标题*/
-#articleContentId {
-    display: flex;
-    justify-content: center;
-    font-size: 33px;
-    padding-top:23px;
-    padding-bottom: 10px;
+.title-article {
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 33px !important;
+    padding-top:23px !important;
+    padding-bottom: 10px !important;
 }
 
 /*调整头像*/
@@ -106,7 +106,7 @@ body {
 }
 
 /*适当展示图片*/
-img {
+main #content_views img {
     max-width: 70% !important;
 }
 
@@ -125,7 +125,13 @@ img {
     const purify_style_mb = `
 #csdn-toolbar /*隐藏[置顶的][顶部的]菜单栏*/,
 #operate /*隐藏[置顶的][底部的]搜索标签与评论*/,
-.aside-header-fixed /*隐藏[顶部的]关注*/
+.article-type /*隐藏[正文的][顶部的]文章类型*/,
+.have-heart-count /*隐藏[正文的][顶部的]赞*/,
+.identity-icon /*隐藏[正文的][顶部的]身份等级*/,
+#detailFollow /*隐藏[正文的][顶部的]关注*/,
+#recommend /*隐藏[正文的][底部的]推荐文章*/,
+#recommend div[data-url*="download.csdn.net"] /*隐藏[正文的][底部的]含有下载的推荐文章*/,
+#recommend div[data-url*="wenku.csdn.net"] /*隐藏[正文的][底部的]含有文库的推荐文章*/
 {
     display: none !important;
 }
@@ -141,8 +147,8 @@ body {
 
 /*展示分界线*/
 .spec_space {
-    background-color: #ffebeb !important;
     height: 32px !important;
+    background-color: #eaeaea !important;
 }
 `;
 
