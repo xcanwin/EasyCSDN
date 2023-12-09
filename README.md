@@ -20,6 +20,7 @@
 
 - 喜欢这个插件的小伙伴，可以给我的GITHUB项目 [EasyCSDN](https://github.com/xcanwin/EasyCSDN) 点个⭐️STAR支持一下。
 - 这是一款促进```CSDN```极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码、阅读全文等。让我们的学习体验无比简洁、专注、高效、畅快。
+- ```CSDN```和```简书```是技术覆盖面非常广的学习网站，推荐安装作者共享的```Easy系列```插件：[EasyCSDN](https://github.com/xcanwin/EasyCSDN/) 与 [EasyJIANSHU](https://github.com/xcanwin/EasyJIANSHU/)。
 
 ## 展示
 
@@ -89,7 +90,3 @@
 ## 关于 复制文本 功能
 
 - 使用我另一个GITHUB项目 [Unlimit-Web](https://github.com/xcanwin/Unlimit-Web/)
-
-## 其他
-
-- [EasyCSDN](https://github.com/xcanwin/EasyCSDN/) 与 [EasyJIANSHU](https://github.com/xcanwin/EasyJIANSHU/) 会保持相同的视觉效果，推荐都安装。
