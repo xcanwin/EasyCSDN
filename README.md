@@ -19,8 +19,8 @@
 ## 项目简介
 
 - 喜欢这个插件的小伙伴，可以给我的GITHUB项目 [EasyCSDN](https://github.com/xcanwin/EasyCSDN) 点个⭐️STAR支持一下。
-- 这是一款促进```CSDN```极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码、阅读全文等。让我们的学习体验无比简洁、专注、高效、畅快。
-- ```CSDN```和```简书```和```博客园```是技术覆盖面非常广的学习网站，推荐安装作者共享的```Easy系列```插件：[EasyCSDN](https://github.com/xcanwin/EasyCSDN/) 与 [EasyJIANSHU](https://github.com/xcanwin/EasyJIANSHU/) 与 [EasyCNBLOGS](https://github.com/xcanwin/EasyCNBLOGS/)。
+- 这是一款促进 `CSDN` 极致简洁和高效的插件。免费共享大量创新功能，如：净化页面、展示全屏、显示推荐、复制文本、展开代码、阅读全文等。让我们的学习体验无比简洁、专注、高效、畅快。
+- `知乎` 和 `CSDN` 和 `简书` 和 `博客园` 是技术覆盖面非常广的学习网站，推荐安装作者共享的 `Easy系列` 插件：[EasyZHIHU](https://github.com/xcanwin/EasyZHIHU/) 与 [EasyCSDN](https://github.com/xcanwin/EasyCSDN/) 与 [EasyJIANSHU](https://github.com/xcanwin/EasyJIANSHU/) 与 [EasyCNBLOGS](https://github.com/xcanwin/EasyCNBLOGS/)。
 
 ## 展示
 
@@ -51,29 +51,29 @@
 
 ## 使用方法
 
-1. 安装```Tampermonkey```，通过 [官网](https://www.tampermonkey.net/)；
-2. 安装```EasyCSDN```，通过 [安装渠道](#安装渠道)；
-3. 访问```CSDN```；
+1. 安装`Tampermonkey`，通过 [官网](https://www.tampermonkey.net/)；
+2. 安装`EasyCSDN`，通过 [安装渠道](#安装渠道)；
+3. 访问`CSDN`；
 
 ## 关于 净化页面 功能
 
-- 减少```大量的```置顶遮挡物。
-- 减少```大量的```多余元素。
-- 减少```频繁地```手动关闭遮挡物。
+- 减少`大量的`置顶遮挡物。
+- 减少`大量的`多余元素。
+- 减少`频繁地`手动关闭遮挡物。
 - 让页面焕然一新，提升体验感。
 
 ## 关于 展示全屏 功能
 
-- 拓展纵向视野，增加```11行```文本。
-- 拓宽横向视野，增加```48列```文本。
-- 减少```频繁地```上下滚动鼠标。
-- 减少```频繁地```左右滚动鼠标。
+- 拓展纵向视野，增加`11行`文本。
+- 拓宽横向视野，增加`48列`文本。
+- 减少`频繁地`上下滚动鼠标。
+- 减少`频繁地`左右滚动鼠标。
 - 释放鼠标手，提升体验感。
 
 ## 关于 显示推荐 功能
 
-- 默认隐藏```推荐文章```。
-- 通过点击```最底部的灰色框```，临时显示```推荐文章```。
+- 默认隐藏`推荐文章`。
+- 通过点击`最底部的灰色框`，临时显示`推荐文章`。
 - 专注阅读，提升体验感。
 
 ## 关于 展开代码 功能
